@@ -1,0 +1,40 @@
+llm:
+  api_key: ""
+  base_url: "https://www.dmxapi.cn/v1"
+  chat_model: "gpt-5-mini"
+  vision_model: "gpt-5-mini"
+  temperature: 0.2
+  timeout: 60
+
+server:
+  host: "127.0.0.1"
+  port: 8008
+  cors_origins:
+    - "http://127.0.0.1:5175"
+
+rag:
+  top_k: 6
+  vector_weight: 0.65
+  bm25_weight: 0.35
+  chunk_size: 520
+  chunk_overlap: 90
+
+memory:
+  short_term_max_turns: 12
+  long_term_enabled: true
+  body_metrics_retention_days: 3650
+
+auth:
+  jwt_secret: "dev-only-change-me"
+
+privacy:
+  mask_api_key_in_logs: true
+  hide_absolute_path: true
+  save_uploaded_images: true
+  uploaded_image_retention_days: 30
+
+features:
+  enable_vision_food_recognition: true
+  enable_agent_trace: true
+  enable_long_term_memory: true
+  enable_health_risk_notice: true

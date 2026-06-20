@@ -1,0 +1,1 @@
+"""NutriFit AI backend package."""
